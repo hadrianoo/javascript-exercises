@@ -1,4 +1,12 @@
-const palindromes = function () {
+const palindromes = function (string) {
+    let specialChars =
+        "!@#$%^&*()-_=+[{]};:'\",<.>/?\\| ";
+    let clonedString = string
+        .toLowerCase()
+        .split("")
+        .filter(item => !specialChars.includes(item));
+
+    return clonedString.toReversed().join("") === clonedString.join("");
 
 };
 
